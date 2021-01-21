@@ -197,13 +197,6 @@ const Group = function Group(options = {}, viewer) {
           tickButton.setIcon(getCheckIcon(visibleState));
         }
       });
-      this.on('add:group', () => {
-        visibleState = groupList.getVisible();
-        if (tickButton) {
-          tickButton.setState(stateCls[visibleState]);
-          tickButton.setIcon(getCheckIcon(visibleState));
-        }
-      });
 
       // only listen to tick changes for subgroups
       if (type === 'grouplayer') {
